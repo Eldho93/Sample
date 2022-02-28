@@ -44,7 +44,6 @@ class MyCache private constructor() {
 
     fun clearAllBitmaps(){
         try{
-            instance.lru.createCount()
             instance.lru.evictAll()
         }catch (e: Exception) {
         }
