@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Sample Project</string>
+    <string name="generate_dogs">Generate Dogs!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="random_dog_generator">Random Dog Generator!</string>
+    <string name="my_recently_generated_dogs">My Recently Generated Dogs!</string>
+    <string name="generate">Generate!</string>
+    <string name="clear_dogs">Clear Dogs!</string>
 </resources>

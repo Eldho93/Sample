@@ -4,7 +4,7 @@ class ApiCalls {
 
     companion object {
 
-        const val MainServer = "https://reqres.in/api/"
+        const val MainServer = "https://dog.ceo/api/"
     }
 
 
