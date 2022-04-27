@@ -1,0 +1,27 @@
+[
+  {
+    "villageID": "V001",
+    "villageName": "Delhi",
+    "villageSellingPrice": 101.00
+  },
+  {
+    "villageID": "V002",
+    "villageName": "Mumbai",
+    "villageSellingPrice": 102.10
+  },
+  {
+    "villageID": "V003",
+    "villageName": "Pune",
+    "villageSellingPrice": 103.40
+  },
+  {
+    "villageID": "V004",
+    "villageName": "Kochi",
+    "villageSellingPrice": 105.50
+  },
+  {
+    "villageID": "V005",
+    "villageName": "Chennai",
+    "villageSellingPrice": 100.09
+  }
+]

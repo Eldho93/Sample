@@ -1,0 +1,18 @@
+[
+  {
+    "loyaltyCardID": "S001",
+    "sellerName": "David"
+  },
+  {
+    "loyaltyCardID": "S002",
+    "sellerName": "John"
+  },
+  {
+    "loyaltyCardID": "S003",
+    "sellerName": "Ram"
+  },
+  {
+    "loyaltyCardID": "S004",
+    "sellerName": "Laila"
+  }
+]

@@ -11,18 +11,25 @@
         android:label="HomeFragment" >
         <action
             android:id="@+id/action_homeFragment_to_fragmentGenerate"
-            app:destination="@id/fragmentGenerate" />
-        <action
-            android:id="@+id/action_homeFragment_to_fragmentListDogs"
-            app:destination="@id/fragmentListDogs" />
+            app:destination="@id/fragmentGenerate" >
+            <argument
+                android:name="sellerName"
+                app:argType="string" />
+            <argument
+                android:name="grossPrice"
+                app:argType="string" />
+            <argument
+                android:name="grossWeight"
+                app:argType="string" />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/fragmentGenerate"
         android:name="com.eldho.sampleproject.view.GenerateFragment"
         android:label="FragmentGenerate" >
+        <action
+            android:id="@+id/action_fragmentGenerate_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/fragmentListDogs"
-        android:name="com.eldho.sampleproject.view.ListDogsFragment"
-        android:label="FragmentListDogs" />
+
 </navigation>

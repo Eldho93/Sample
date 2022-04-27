@@ -7,51 +7,274 @@
     tools:context=".view.HomeFragment">
 
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/nestedScroll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtTitleApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mandi"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_22ssp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/layoutSellerName"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/txtTitleApp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_green_curved"
+                android:padding="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtSellerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seller Name"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="italic" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etSellerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSellerName"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@drawable/bg_white_curved"
+                    android:hint="Enter Seller Name"
+                    android:padding="@dimen/_6sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/layoutLoyaltyID"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:background="@drawable/bg_green_curved"
+                android:layout_below="@+id/layoutSellerName"
+                >
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loyalty Card Identifier"
+                    android:id="@+id/txtLoyaltyID"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="italic"
+                    />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@drawable/bg_white_curved"
+                    android:textSize="@dimen/_14ssp"
+                    android:id="@+id/etLoyalty"
+                    android:layout_below="@+id/txtLoyaltyID"
+                    android:hint="Enter Loyalty Card ID"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/layoutVillage"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:background="@drawable/bg_green_curved"
+                android:layout_below="@+id/layoutLoyaltyID"
+                >
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtVillage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Village"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="italic" />
+
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:id="@+id/spinnerVillage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtVillage"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@drawable/bg_white_curved"
+                    android:gravity="start"
+                    android:hint="Select Village"
+                    android:padding="@dimen/_6sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="italic"
+                    app:spinner_arrow_gravity="end"
+                    app:spinner_arrow_padding="8dp"
+                    app:spinner_arrow_show="true"
+                    app:spinner_arrow_tint="@color/text_gray"
+                    app:spinner_divider_color="@color/text_gray"
+                    app:spinner_divider_show="false"
+                    app:spinner_divider_size="0.4dp"
+                    app:spinner_popup_animation="dropdown"
+                    app:spinner_popup_background="@color/white"
+                    app:spinner_popup_elevation="14dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/layoutGrossWt"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:background="@drawable/bg_green_curved"
+                android:layout_below="@+id/layoutVillage"
+                >
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gross Weight"
+                    android:id="@+id/txtGrossWt"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="italic"
+                    />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etGrossWt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtGrossWt"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@drawable/bg_white_curved"
+                    android:hint="Enter Gross Weight in Tonnes"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/_6sdp"
+                    android:textSize="@dimen/_14ssp"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:id="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtTitleApp"
+        android:id="@+id/txtGrossPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/random_dog_generator"
-        android:textSize="@dimen/_14ssp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Gross Price"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtGrossPriceValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        tools:text="20300 INR"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/txtGrossPrice"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtLoyaltyIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Applied Loyalty Index: "
+        android:textColor="@color/bright_green"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtGrossPrice"
+        />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtLoyaltyIndexValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        tools:text="Gross Price"
+        android:textColor="@color/bright_green"
+        android:textSize="@dimen/_12ssp"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtGrossPrice"
+        app:layout_constraintStart_toEndOf="@+id/txtLoyaltyIndex"/>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/MaterialButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSellProduce"
+        app:cornerRadius="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="@dimen/_8sdp"
+        android:enabled="false"
+        android:text="Sell My Produce"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@id/txtLoyaltyIndex"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
-
-
-    <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnGenerate"
-        app:cornerRadius="30dp"
-        app:strokeColor="@color/black"
-        app:strokeWidth="@dimen/_1sdp"
-        app:backgroundTint="@color/blue"
-        android:text="@string/generate_dogs"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@id/txtTitleApp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnListDogs"
-        app:cornerRadius="30dp"
-        app:strokeColor="@color/black"
-        app:strokeWidth="@dimen/_1sdp"
-        app:backgroundTint="@color/blue"
-        android:text="@string/my_recently_generated_dogs"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@id/btnGenerate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
