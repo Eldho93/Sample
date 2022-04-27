@@ -13,7 +13,10 @@ class HomeRepository {
     val villagesData: MutableLiveData<List<Villages>> = MutableLiveData()
     val sellerData: MutableLiveData<List<Sellers>> = MutableLiveData()
 
-
+    /**
+     * Gets the list of sellers from the json file in assets folder
+     * @param context Context
+     */
     fun getSellersList(context: Context)  {
 
         lateinit var jsonString: String
@@ -29,6 +32,11 @@ class HomeRepository {
         sellerData.value =  Gson().fromJson(jsonString, listSellers)
     }
 
+
+    /**
+     * Gets the list of villages from the json file in assets folder
+     * @param context Context
+     */
     fun getVillagesList(context: Context) {
 
         lateinit var jsonString: String
