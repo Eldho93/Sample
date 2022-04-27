@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.eldho.sampleproject.view.HomeFragment"
+        android:name="com.eldho.sampleproject.view.fragment.HomeFragment"
         android:label="HomeFragment" >
         <action
             android:id="@+id/action_homeFragment_to_fragmentGenerate"
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentGenerate"
-        android:name="com.eldho.sampleproject.view.GenerateFragment"
+        android:name="com.eldho.sampleproject.view.fragment.GenerateFragment"
         android:label="FragmentGenerate" >
         <action
             android:id="@+id/action_fragmentGenerate_to_homeFragment"

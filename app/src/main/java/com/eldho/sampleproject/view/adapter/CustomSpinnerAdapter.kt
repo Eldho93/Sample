@@ -1,11 +1,11 @@
-package com.eldho.sampleproject.view
+package com.eldho.sampleproject.view.adapter
 
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.eldho.sampleproject.model.Villages
-import com.eldho.sampleproject.utils.NO_SELECTED_INDEX
+import com.eldho.sampleproject.constants.NO_SELECTED_INDEX
 import com.skydoves.powerspinner.OnSpinnerItemSelectedListener
 import com.skydoves.powerspinner.PowerSpinnerInterface
 import com.skydoves.powerspinner.PowerSpinnerView
@@ -29,13 +29,7 @@ class CustomSpinnerAdapter(
         LayoutInflater.from(parent.context), parent,
         false
       )
-    return CustomSpinnerViewHolder(binding)/*.apply {
-      binding.root.setOnClickListener {
-        val position = bindingAdapterPosition.takeIf { it != RecyclerView.NO_POSITION }
-          ?: return@setOnClickListener
-        notifyItemSelected(position)
-      }
-    }*/
+    return CustomSpinnerViewHolder(binding)
   }
 
   override fun onBindViewHolder(holder: CustomSpinnerViewHolder, position: Int) {
@@ -63,7 +57,6 @@ class CustomSpinnerAdapter(
       newIndex = index,
       newItem = spinnerItems[index]
     )
-//    this.onSpinnerItemSelectedListener=
   }
 
   override fun getItemCount() = spinnerItems.size

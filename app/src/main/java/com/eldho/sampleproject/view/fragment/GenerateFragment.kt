@@ -1,5 +1,4 @@
-package com.eldho.sampleproject.view
-
+package com.eldho.sampleproject.view.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -40,7 +39,8 @@ class GenerateFragment : Fragment() {
         mBinding.apply {
 
             txtMessage1.text = "Thank you $sellerName for selling your quality produce."
-            txtMessage2.text = "Please ensure you received $grossPrice INR for $grossWeight Tonnes of your produce"
+            txtMessage2.text =
+                "Please ensure you received $grossPrice INR for $grossWeight Tonnes of your produce"
 
             btnSellProduce.setOnClickListener {
                 val action = GenerateFragmentDirections.actionFragmentGenerateToHomeFragment()

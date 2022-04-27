@@ -1,4 +1,4 @@
-package com.eldho.sampleproject.utils
+package com.eldho.sampleproject.constants
 
 
 /** definition of the non-value of Int type. */

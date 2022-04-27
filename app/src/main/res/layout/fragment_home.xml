@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".view.HomeFragment">
+    tools:context=".view.fragment.HomeFragment">
 
 
     <androidx.core.widget.NestedScrollView
@@ -60,10 +60,11 @@
                     android:layout_marginTop="@dimen/_6sdp"
                     android:background="@drawable/bg_white_curved"
                     android:hint="Enter Seller Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
                     android:padding="@dimen/_6sdp"
-                    android:textSize="@dimen/_14ssp"
-                    android:imeOptions="actionDone"
-                    android:singleLine="true"/>
+                    android:singleLine="true"
+                    android:textSize="@dimen/_14ssp" />
 
 
             </RelativeLayout>
@@ -89,18 +90,18 @@
 
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etLoyalty"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/_6sdp"
+                    android:layout_below="@+id/txtLoyaltyID"
                     android:layout_marginTop="@dimen/_6sdp"
                     android:background="@drawable/bg_white_curved"
-                    android:textSize="@dimen/_14ssp"
-                    android:id="@+id/etLoyalty"
-                    android:layout_below="@+id/txtLoyaltyID"
                     android:hint="Enter Loyalty Card ID"
                     android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/_6sdp"
                     android:singleLine="true"
-                    />
+                    android:textSize="@dimen/_14ssp" />
 
             </RelativeLayout>
 
@@ -190,10 +191,11 @@
 
     <View
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="0dp"
         android:id="@+id/view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtGrossPrice"
         app:layout_constraintBottom_toBottomOf="parent"
         />
 
@@ -202,13 +204,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:paddingTop="16dp"
+        android:layout_marginBottom="10dp"
         android:text="Gross Price"
         android:textColor="@color/black"
         android:textSize="@dimen/_16ssp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintBottom_toTopOf="@+id/txtLoyaltyIndex"
         />
 
 
@@ -217,14 +220,15 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
+        android:paddingTop="16dp"
+        android:layout_marginBottom="10dp"
         tools:text="20300 INR"
         android:textColor="@color/black"
         android:textSize="@dimen/_16ssp"
         android:textStyle="bold"
         android:textAlignment="viewEnd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintBottom_toTopOf="@+id/txtLoyaltyIndexValue"
         app:layout_constraintStart_toEndOf="@+id/txtGrossPrice"/>
 
     <com.google.android.material.textview.MaterialTextView
@@ -233,11 +237,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="24dp"
         android:text="Applied Loyalty Index: "
         android:textColor="@color/bright_green"
         android:textSize="@dimen/_12ssp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtGrossPrice"
+        app:layout_constraintBottom_toTopOf="@+id/btnSellProduce"
         />
 
 
@@ -247,12 +252,13 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="24dp"
         tools:text="Gross Price"
         android:textColor="@color/bright_green"
         android:textSize="@dimen/_12ssp"
         android:textAlignment="viewStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtGrossPrice"
+        app:layout_constraintBottom_toTopOf="@+id/btnSellProduce"
         app:layout_constraintStart_toEndOf="@+id/txtLoyaltyIndex"/>
 
 
@@ -265,13 +271,13 @@
         app:cornerRadius="10dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
         android:padding="@dimen/_8sdp"
         android:enabled="false"
         android:text="Sell My Produce"
         android:textColor="@color/white"
         android:textAllCaps="false"
         android:textSize="@dimen/_12ssp"
-        app:layout_constraintTop_toBottomOf="@id/txtLoyaltyIndex"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>

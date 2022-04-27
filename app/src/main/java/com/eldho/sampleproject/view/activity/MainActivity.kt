@@ -1,8 +1,7 @@
-package com.eldho.sampleproject.view
+package com.eldho.sampleproject.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.ViewModelProvider
 import com.eldho.sampleproject.R
 
 class MainActivity : AppCompatActivity() {

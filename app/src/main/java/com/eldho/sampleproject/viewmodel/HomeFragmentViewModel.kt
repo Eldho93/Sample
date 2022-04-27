@@ -7,8 +7,8 @@ import androidx.lifecycle.viewModelScope
 import com.eldho.sampleproject.model.Sellers
 import com.eldho.sampleproject.model.Villages
 import com.eldho.sampleproject.repository.HomeRepository
-import com.eldho.sampleproject.utils.Constants.Companion.LOYALTY_INDEX_FOR_REGISTERED_USER
-import com.eldho.sampleproject.utils.Constants.Companion.LOYALTY_INDEX_FOR_UNREGISTERED_USER
+import com.eldho.sampleproject.constants.Constants.Companion.LOYALTY_INDEX_FOR_REGISTERED_USER
+import com.eldho.sampleproject.constants.Constants.Companion.LOYALTY_INDEX_FOR_UNREGISTERED_USER
 import kotlinx.coroutines.launch
 import java.text.DecimalFormat
 
@@ -67,6 +67,13 @@ class HomeFragmentViewModel : ViewModel() {
         loyaltyFlag.value = flag
     }
 
+    /**
+     * Calculates gross price of the users products.
+     * Calculated by the formula selling price of a village multiplied by gross weight of the produce and Loyalty Index.
+     * Loyalty Index for a registered user is 1.12 and for unregistered user is 0.9811 and is defined in Constants class,
+     * @param villageSellingPrice Selling price of the selected village as defined in the Villages.json.
+     * @param grossWt Gross Weight entered by user.
+     */
     fun calculateGrossPrice(villageSellingPrice: Float, grossWt:Float){
         val df = DecimalFormat("#.##")
         if(loyaltyFlag.value == true){
